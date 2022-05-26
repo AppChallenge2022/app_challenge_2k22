@@ -1,4 +1,5 @@
 import 'package:app_challenge_2k22/pages/login.dart';
+import 'package:app_challenge_2k22/search.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
