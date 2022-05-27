@@ -1,14 +1,16 @@
-import 'package:app_challenge_2k22/widgets/button.dart';
+import 'package:app_challenge_2k22/pages/reset_password.dart';
+import 'package:app_challenge_2k22/widgets/cadastrarButton.dart';
+import 'package:app_challenge_2k22/widgets/entrarButton.dart';
 import 'package:flutter/material.dart';
 
-class login extends StatefulWidget {
-  const login({Key? key}) : super(key: key);
+class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
 
   @override
-  State<login> createState() => _loginState();
+  State<Login> createState() => _LoginState();
 }
 
-class _loginState extends State<login> {
+class _LoginState extends State<Login> {
 
   bool _showPassword = false;
   @override
@@ -33,7 +35,7 @@ class _loginState extends State<login> {
                 style:TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
-                    color: Color.fromRGBO(1, 168, 88, 1)),
+                    color: Colors.green),
                 textAlign: TextAlign.center),
 
             const SizedBox(
@@ -44,7 +46,7 @@ class _loginState extends State<login> {
               decoration: const InputDecoration(
                 labelText: "E-mail",
                 labelStyle: TextStyle(
-                  color: Color.fromRGBO(1, 168, 88, 1),
+                  color: Colors.green,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
@@ -63,7 +65,7 @@ class _loginState extends State<login> {
               decoration: InputDecoration(
                 labelText: "Senha",
                 labelStyle: const TextStyle(
-                  color: Color.fromRGBO(1, 168, 88, 1),
+                  color: Colors.green,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
@@ -96,29 +98,36 @@ class _loginState extends State<login> {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                  // Navigator.of(context).push(
-                  //   MaterialPageRoute(
-                  //     builder: (context) => ResetPassword(),
-                  //   ),
-                  // );
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ResetPassword(),
+                    ),
+                  );
                 },
                 child: const Text(
                   'Esqueceu a senha?',
                   style: TextStyle(
-                    color: Color.fromRGBO(1, 168, 88, 1),),),
+                    color: Colors.green,),),
               ),
             ),
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
 
             const SizedBox(
               height: 20,
             ),
             SizedBox(
-              child: button(),
+              child: EntrarButton(),
 
               ),
+            const SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              child: CadastrarButton(),
+
+            ),
           ],
         ),
       ),

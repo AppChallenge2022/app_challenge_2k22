@@ -1,5 +1,5 @@
 import 'package:app_challenge_2k22/pages/login.dart';
-import 'package:app_challenge_2k22/search.dart';
+import 'package:app_challenge_2k22/pages/search.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -17,9 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
-      home: const login(),
+      home: const Login(),
     );
   }
 }
