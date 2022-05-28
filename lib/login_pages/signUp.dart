@@ -1,5 +1,5 @@
-import 'package:app_challenge_2k22/pages/login.dart';
-import 'package:app_challenge_2k22/pages/signUpForm.dart';
+import 'package:app_challenge_2k22/login_pages/login.dart';
+import 'package:app_challenge_2k22/login_pages/signUpForm.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
@@ -8,29 +8,38 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Cadastrar",
+          style: TextStyle(
+              fontSize: 25
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.green,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 70,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 100),
-              child: Text(
-                "Criar conta",
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-            SizedBox(
               height: 20,
             ),
-            const SizedBox(
-              width: 5,
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 100),
+            //   child: Text(
+            //     "Criar conta",
+            //     style: TextStyle(
+            //       fontSize: 32,
+            //       fontWeight: FontWeight.w700,
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(
+            //   height: 20,
+            // ),
+            // const SizedBox(
+            //   width: 5,
+            // ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: Row(

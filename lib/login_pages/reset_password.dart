@@ -8,26 +8,35 @@ class ResetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Recuperar Senha",
+          style: TextStyle(
+              fontSize: 25
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.green,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 80,
+              height: 20,
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 70),
-              child: Text(
-                "Recuperar senha",
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
+              // child: Text(
+              //   "Recuperar senha",
+              //   style: TextStyle(
+              //     fontSize: 32,
+              //     fontWeight: FontWeight.w700,
+              //   ),
+              // ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            // const SizedBox(
+            //   height: 20,
+            // ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Row(
@@ -63,7 +72,7 @@ class ResetPassword extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 80,
             ),
             const Padding(
               padding: EdgeInsets.only(left: 30, right: 10),

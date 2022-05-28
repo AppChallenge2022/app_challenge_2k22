@@ -1,5 +1,7 @@
-import 'package:app_challenge_2k22/pages/login.dart';
-import 'package:app_challenge_2k22/pages/search.dart';
+import 'package:app_challenge_2k22/api/resultPlans.dart';
+import 'package:app_challenge_2k22/geo_pages/map.dart';
+import 'package:app_challenge_2k22/login_pages/login.dart';
+import 'package:app_challenge_2k22/login_pages/search.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -15,11 +17,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const Login(),
+      home: ResultPlans(value: 'value', option: 'option')
     );
   }
 }

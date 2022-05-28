@@ -1,4 +1,4 @@
-import 'package:app_challenge_2k22/pages/login.dart';
+import 'package:app_challenge_2k22/login_pages/login.dart';
 import 'package:flutter/material.dart';
 
 class SingUpForm extends StatefulWidget {

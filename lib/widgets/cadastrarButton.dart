@@ -1,7 +1,5 @@
-import 'package:app_challenge_2k22/pages/signUp.dart';
+import 'package:app_challenge_2k22/login_pages/signUp.dart';
 import 'package:flutter/material.dart';
-
-import '../pages/login.dart';
 
 class CadastrarButton extends StatelessWidget {
   const CadastrarButton({Key? key}) : super(key: key);
