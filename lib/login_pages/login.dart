@@ -46,7 +46,7 @@ class _LoginState extends State<Login> {
               decoration: const InputDecoration(
                 labelText: "E-mail",
                 labelStyle: TextStyle(
-                  color: Colors.green,
+                  color: Color.fromRGBO(82, 181, 152, 1),
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),

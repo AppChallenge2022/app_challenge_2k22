@@ -1,11 +1,12 @@
-import 'package:app_challenge_2k22/base_models/appColors.dart';
-import 'package:app_challenge_2k22/details/detailsPlansPage.dart';
+import 'package:app_challenge_2k22/api/installersCard.dart';
 import 'package:app_challenge_2k22/api/planscard.dart';
-import 'package:app_challenge_2k22/api/plansModel.dart';
+import 'package:app_challenge_2k22/api/installersModel.dart';
+import 'package:app_challenge_2k22/details/detailsInstallersPage.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import '../base_models/appColors.dart';
 import '../base_models/baseTexts.dart';
 
 // Estrutura basica das requisições
@@ -14,47 +15,46 @@ BaseOptions options = new BaseOptions(
   connectTimeout: 5000,
 );
 
-class ResultPlans extends StatefulWidget {
-
+class ResultInstallers extends StatefulWidget {
   final String value;
   final String option;
-  List<PlansModel> plans = <PlansModel>[];
+  List<InstallersModel> installers = <InstallersModel>[];
 
-  ResultPlans({Key? key, required this.value, required this.option})
+  ResultInstallers({Key? key, required this.value, required this.option})
       : super(key: key);
+
   @override
-  _ResultPlansState createState() => _ResultPlansState();
+  State<ResultInstallers> createState() => _ResultInstallersState();
 }
 
-class _ResultPlansState extends State<ResultPlans> {
+class _ResultInstallersState extends State<ResultInstallers> {
   @override
   void initState() {
     super.initState();
-    this.getPlans();
+    this.getInstallers();
   }
 
   // Métodos
   void navigate(e) => Navigator.push(
-      context, MaterialPageRoute(builder: (context) => DetailsPlansPage(plans: e)));
+      context, MaterialPageRoute(builder: (context) => DetailsInstallersPage(installers: e)));
 
-  Future<void> getPlans() async {
-    List<PlansModel> auxPlans =
-    <PlansModel>[]; // Recebe os valores da requisição
+  Future<void> getInstallers() async {
+    List<InstallersModel> auxPlans =
+    <InstallersModel>[]; // Recebe os valores da requisição
 
     // Realiza a requisição
     Response response = await Dio(options)
-        .get("/plans");
+        .get("/installers");
 
-    //print(response);
     // Pesquisa seja válida
     if (response.statusCode == 200) {
 
       for (var item in response.data.toList()) {
         //print(item);
-        auxPlans.add(new PlansModel.fromMap(item)); // Varrendo o array da resposta
+        auxPlans.add(new InstallersModel.fromMap(item)); // Varrendo o array da resposta
 
         setState(
-                () => widget.plans = auxPlans); // Setando os valores no estado
+                () => widget.installers = auxPlans); // Setando os valores no estado
       }
     }
   }
@@ -62,7 +62,7 @@ class _ResultPlansState extends State<ResultPlans> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Planos",
+          title: Text("Instaladores",
             style: TextStyle(
                 fontSize: 25
             ),
@@ -72,13 +72,13 @@ class _ResultPlansState extends State<ResultPlans> {
         ),
         body: SizedBox.expand(
           child: Container(
-            padding: EdgeInsets.only(top: 10),
-            color: Colors.lightBlueAccent,
+            padding: EdgeInsets.only(top: 5),
+            color: Colors.blue,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Column(
                 children: [
-                  if (widget.plans.length == 0)
+                  if (widget.installers.length == 0)
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 50),
@@ -108,11 +108,10 @@ class _ResultPlansState extends State<ResultPlans> {
                       mainAxisSpacing: 12,
                       crossAxisCount: 2,
                       childAspectRatio: 0.85,
-                      children: widget.plans
+                      children: widget.installers
                           .map((e) =>
-                          CardWidget(onTap: () => navigate(e), plans: e))
+                          InstallersCardWidget(onTap: () => navigate(e), installers: e))
                           .toList(),
-                      //onTap: () => navigate(e),
                     ),
                   ),
                 ],

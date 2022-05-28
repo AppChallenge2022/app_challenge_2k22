@@ -13,7 +13,7 @@ class CadastrarButton extends StatelessWidget {
       ),
       width: 50,
       height: 50,
-      //color: Color.fromRGBO(1, 168, 88, 1),
+      //color: Color.fromRGBO(82, 181, 152, 1),
       child: ElevatedButton(
         child: Text(
           "Cadastrar",

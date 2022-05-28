@@ -24,7 +24,7 @@ class PlansModel{
   Map<String, dynamic> toMap(){
     return {
     'id' : id,
-    'provider': isp,
+    'isp': isp,
     'data_capacity' : data_capacity,
     'download_speed' : download_speed,
     'upload_speed' : upload_speed,
@@ -37,12 +37,12 @@ class PlansModel{
   factory PlansModel.fromMap(Map<String, dynamic> map) {
     return PlansModel(
       id: map['id'],
-      isp: map['provider'] ?? '',
-      data_capacity: map["data_capacity"],
+      isp: map['isp'] ?? '',
+      data_capacity: map["data_capacity"] ?? 0,
       download_speed: map['download_speed'] ?? 0,
-      upload_speed: map['upload_speed'] ?? 0,
+      upload_speed: map['upload_speed'].toInt(),
       description: map['description'],
-      price_per_month: map['price_per_month'],
+      price_per_month: map['price_per_month'].toDouble(),
       type_of_internet: map['type_of_internet'],
     );
   }
