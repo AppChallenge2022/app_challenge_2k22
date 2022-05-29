@@ -2,10 +2,8 @@ import 'package:app_challenge_2k22/api/plansModel.dart';
 import 'package:app_challenge_2k22/details/detailWidget.dart';
 import 'package:app_challenge_2k22/widgets/contratarButton.dart';
 import 'package:flutter/material.dart';
-
 import '../base_models/appColors.dart';
 import '../base_models/baseTexts.dart';
-import '../home_page/home.dart';
 
 class DetailsPlansPage extends StatelessWidget {
 

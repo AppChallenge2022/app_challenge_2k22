@@ -1,5 +1,4 @@
 import 'package:app_challenge_2k22/api/resultInstallers.dart';
-import 'package:app_challenge_2k22/home_page/home.dart';
 import 'package:flutter/material.dart';
 
 class InstallersButton extends StatelessWidget {
@@ -14,7 +13,6 @@ class InstallersButton extends StatelessWidget {
       ),
       width: 50,
       height: 50,
-      //color: Color.fromRGBO(1, 168, 88, 1),
       child: ElevatedButton(
         child: Text(
           "Pesquisar Instaladores",

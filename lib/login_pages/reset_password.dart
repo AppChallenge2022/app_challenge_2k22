@@ -71,7 +71,6 @@ class ResetPassword extends StatelessWidget {
               child: Text(
                 'Entre com o email associado a conta.',
                 style: TextStyle(
-                  // fontSize: 20,
                     fontWeight: FontWeight.w500,
                     color: Colors.black,
                     fontSize: 20),

@@ -2,7 +2,6 @@ import 'package:app_challenge_2k22/login_pages/reset_password.dart';
 import 'package:app_challenge_2k22/widgets/cadastrarButton.dart';
 import 'package:app_challenge_2k22/widgets/entrarButton.dart';
 import 'package:flutter/material.dart';
-
 import '../base_models/appColors.dart';
 
 class Login extends StatefulWidget {

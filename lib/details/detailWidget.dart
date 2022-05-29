@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../base_models/baseTexts.dart';
 
 class DetailWidget extends StatelessWidget {
+
   // Atributos
   final String title;
   final String content;

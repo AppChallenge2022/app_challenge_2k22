@@ -13,7 +13,6 @@ class CadastrarButton extends StatelessWidget {
       ),
       width: 50,
       height: 50,
-      //color: Color.fromRGBO(82, 181, 152, 1),
       child: ElevatedButton(
         child: Text(
           "Cadastrar",
@@ -26,7 +25,6 @@ class CadastrarButton extends StatelessWidget {
         onPressed: (){
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => SignUp()));
-
         },
       ),
 

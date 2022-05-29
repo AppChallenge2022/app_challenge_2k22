@@ -1,6 +1,4 @@
-import 'package:app_challenge_2k22/home_page/home.dart';
 import 'package:flutter/material.dart';
-
 import '../api/resultPlans.dart';
 
 class PlansButton extends StatelessWidget {

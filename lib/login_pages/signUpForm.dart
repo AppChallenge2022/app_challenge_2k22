@@ -1,8 +1,6 @@
 import 'package:app_challenge_2k22/login_pages/login.dart';
 import 'package:flutter/material.dart';
-
 import '../base_models/baseTexts.dart';
-import '../home_page/home.dart';
 
 class SingUpForm extends StatefulWidget {
   const SingUpForm({Key? key}) : super(key: key);

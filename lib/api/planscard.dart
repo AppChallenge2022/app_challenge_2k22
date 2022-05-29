@@ -1,7 +1,6 @@
 import 'package:app_challenge_2k22/api/plansModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-
 import '../base_models/appColors.dart';
 import '../base_models/baseTexts.dart';
 

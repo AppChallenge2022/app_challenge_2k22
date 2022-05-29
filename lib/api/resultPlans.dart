@@ -5,7 +5,6 @@ import 'package:app_challenge_2k22/api/plansModel.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import '../base_models/baseTexts.dart';
 
 // Estrutura basica das requisições

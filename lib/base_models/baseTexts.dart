@@ -1,7 +1,6 @@
 import 'package:app_challenge_2k22/base_models/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:app_challenge_2k22/base_models/baseTexts.dart';
 
 class AppTextStyles {
   static final TextStyle title = GoogleFonts.notoSans(

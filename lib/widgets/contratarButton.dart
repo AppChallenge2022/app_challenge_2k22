@@ -1,6 +1,5 @@
 import 'package:app_challenge_2k22/base_models/baseTexts.dart';
 import 'package:flutter/material.dart';
-
 import '../home_page/home.dart';
 
 class ContratarButton extends StatelessWidget {
@@ -11,10 +10,10 @@ class ContratarButton extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-
       ),
       width: 350,
       height: 50,
+
       child: ElevatedButton(
         child: Text(
           "Contratar",

@@ -1,11 +1,9 @@
 import 'package:app_challenge_2k22/api/installersCard.dart';
-import 'package:app_challenge_2k22/api/planscard.dart';
 import 'package:app_challenge_2k22/api/installersModel.dart';
 import 'package:app_challenge_2k22/details/detailsInstallersPage.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import '../base_models/appColors.dart';
 import '../base_models/baseTexts.dart';
 

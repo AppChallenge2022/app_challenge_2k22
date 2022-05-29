@@ -1,8 +1,6 @@
 import 'package:app_challenge_2k22/api/installersModel.dart';
-import 'package:app_challenge_2k22/api/plansModel.dart';
 import 'package:app_challenge_2k22/details/detailWidget.dart';
 import 'package:flutter/material.dart';
-
 import '../base_models/appColors.dart';
 import '../base_models/baseTexts.dart';
 import '../widgets/contratarButton.dart';
