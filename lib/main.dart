@@ -1,13 +1,6 @@
-import 'package:app_challenge_2k22/api/installersCard.dart';
-import 'package:app_challenge_2k22/api/planscard.dart';
-import 'package:app_challenge_2k22/api/resultInstallers.dart';
-import 'package:app_challenge_2k22/api/resultPlans.dart';
 import 'package:app_challenge_2k22/base_models/appColors.dart';
-import 'package:app_challenge_2k22/geo_pages/map.dart';
 import 'package:app_challenge_2k22/login_pages/login.dart';
-import 'package:app_challenge_2k22/login_pages/search.dart';
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
 
 void main() {
   runApp(const MyApp());

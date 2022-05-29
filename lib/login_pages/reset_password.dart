@@ -1,5 +1,6 @@
+import 'package:app_challenge_2k22/base_models/appColors.dart';
 import 'package:flutter/material.dart';
-
+import '../base_models/baseTexts.dart';
 import 'login.dart';
 
 class ResetPassword extends StatelessWidget {
@@ -15,7 +16,7 @@ class ResetPassword extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: AppColors.darkBlue,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -26,17 +27,8 @@ class ResetPassword extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 70),
-              // child: Text(
-              //   "Recuperar senha",
-              //   style: TextStyle(
-              //     fontSize: 32,
-              //     fontWeight: FontWeight.w700,
-              //   ),
-              // ),
             ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Row(
@@ -64,7 +56,7 @@ class ResetPassword extends StatelessWidget {
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
                         decoration: TextDecoration.underline,
-                        color: Colors.green,
+                        color: Color.fromRGBO(33, 147, 176, 1),
                       ),
                     ),
                   )
@@ -92,13 +84,13 @@ class ResetPassword extends StatelessWidget {
                 decoration: const InputDecoration(
                   labelText: "E-mail",
                   labelStyle: TextStyle(
-                    color: Colors.green,
+                    color: Color.fromRGBO(33, 147, 176, 1),
                     fontWeight: FontWeight.w400,
                     fontSize: 20,
                   ),
                   icon: Icon(
                     Icons.email,
-                    color: Colors.green,
+                    color: Color.fromRGBO(33, 147, 176, 1),
                   ),
                 ),
                 style: const TextStyle(fontSize: 20),
@@ -112,6 +104,7 @@ class ResetPassword extends StatelessWidget {
               child: SizedBox(
                 child: ElevatedButton(
                   onPressed: () {
+                    aviso(context);
                   },
                   child: const Text(
                     'Enviar E-mail',
@@ -214,32 +207,6 @@ class ResetPassword extends StatelessWidget {
               child: SizedBox(
                 height: 40,
                 width: 250,
-                // child: RoundedLoadingButton(
-                //   controller: _btnController,
-                //   onPressed: () {
-                //     Future.delayed(
-                //       const Duration(seconds: 2),
-                //           () {
-                //         _btnController.success();
-                //       },
-                //     );
-                //     Navigator.of(context).push(
-                //       MaterialPageRoute(
-                //         builder: (context) => NewPassword(),
-                //       ),
-                //     );
-                //   },
-                //   child: const Text(
-                //     'Confirmar',
-                //     style: TextStyle(
-                //       fontWeight: FontWeight.bold,
-                //       color: Colors.white,
-                //       fontSize: 20,
-                //     ),
-                //   ),
-                //   color: Colors.blue,
-                //   borderRadius: 10,
-                // ),
               ),
             ),
           ],
@@ -265,4 +232,45 @@ class OTPField extends StatelessWidget {
       ),
     );
   }
+}
+
+void aviso (BuildContext context){
+
+  var alertDialog = AlertDialog(
+    title: Text("Uma mensagem foi enviada com sucesso"),
+
+  );
+
+  showDialog(
+      context: context,
+      builder: (BuildContext context){
+
+        Future.delayed(Duration(seconds: 2), () {
+        });
+
+        return Dialog(
+          backgroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0)
+          ),
+          insetAnimationDuration: Duration(seconds: 1),
+          child: Container(
+            height: 200.0,
+            child: Padding(
+              padding: EdgeInsets.all(25.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                      'Um e-mail foi enviado com o código para a recuperação da senha!',
+                      style: AppTextStyles.heading15
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      }
+  );
 }
