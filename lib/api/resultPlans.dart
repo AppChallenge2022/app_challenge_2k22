@@ -73,7 +73,7 @@ class _ResultPlansState extends State<ResultPlans> {
         body: SizedBox.expand(
           child: Container(
             padding: EdgeInsets.only(top: 10),
-            color: Colors.lightBlueAccent,
+            color: Colors.white,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Column(

@@ -3,6 +3,8 @@ import 'package:app_challenge_2k22/widgets/cadastrarButton.dart';
 import 'package:app_challenge_2k22/widgets/entrarButton.dart';
 import 'package:flutter/material.dart';
 
+import '../base_models/appColors.dart';
+
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -35,7 +37,7 @@ class _LoginState extends State<Login> {
                 style:TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
-                    color: Colors.green),
+                    color: AppColors.darkBlue),
                 textAlign: TextAlign.center),
 
             const SizedBox(
@@ -46,39 +48,41 @@ class _LoginState extends State<Login> {
               decoration: const InputDecoration(
                 labelText: "E-mail",
                 labelStyle: TextStyle(
-                  color: Color.fromRGBO(82, 181, 152, 1),
+                  color: Color.fromRGBO(33, 147, 176, 1),
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
                 icon: Icon(
                   Icons.email,
-                  color: Color.fromRGBO(1, 168, 88, 1),
+                  color: Color.fromRGBO(33, 147, 176, 1),
                 ),
               ),
               style: const TextStyle(fontSize: 20),
             ),
+
             const SizedBox(
               height: 10,
             ),
+
             TextFormField(
               keyboardType: TextInputType.text,
               decoration: InputDecoration(
                 labelText: "Senha",
                 labelStyle: const TextStyle(
-                  color: Colors.green,
+                  color: Color.fromRGBO(33, 147, 176, 1),
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
                 icon: const Icon(
                   Icons.lock,
-                  color: Color.fromRGBO(1, 168, 88, 1),
+                  color: Color.fromRGBO(33, 147, 176, 1),
                 ),
                 suffixIcon: GestureDetector(
                   child: Icon(
                       _showPassword == false
                           ? Icons.visibility_off
                           : Icons.visibility,
-                      color: Color.fromRGBO(1, 168, 88, 1),),
+                      color: Color.fromRGBO(33, 147, 176, 1),),
                   onTap: () {
                     setState(
                           () {
@@ -107,7 +111,7 @@ class _LoginState extends State<Login> {
                 child: const Text(
                   'Esqueceu a senha?',
                   style: TextStyle(
-                    color: Colors.green,),),
+                    color: Color.fromRGBO(33, 147, 176, 1),),),
               ),
             ),
             const SizedBox(

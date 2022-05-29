@@ -72,8 +72,8 @@ class _ResultInstallersState extends State<ResultInstallers> {
         ),
         body: SizedBox.expand(
           child: Container(
-            padding: EdgeInsets.only(top: 5),
-            color: Colors.blue,
+            padding: EdgeInsets.only(top: 10),
+            color: Colors.white,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Column(

@@ -2,6 +2,7 @@ import 'package:app_challenge_2k22/api/installersCard.dart';
 import 'package:app_challenge_2k22/api/planscard.dart';
 import 'package:app_challenge_2k22/api/resultInstallers.dart';
 import 'package:app_challenge_2k22/api/resultPlans.dart';
+import 'package:app_challenge_2k22/base_models/appColors.dart';
 import 'package:app_challenge_2k22/geo_pages/map.dart';
 import 'package:app_challenge_2k22/login_pages/login.dart';
 import 'package:app_challenge_2k22/login_pages/search.dart';
@@ -21,10 +22,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: Color.fromARGB(1, 82, 181, 152),
+        //useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: AppColors.darkBlue,
+            secondary: AppColors.darkBlue),
       ),
-      home: ResultInstallers(value: 'value', option: 'option',)
+      home: Login()
     );
   }
 }

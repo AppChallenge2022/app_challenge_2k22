@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../base_models/appColors.dart';
 import '../base_models/baseTexts.dart';
+import '../widgets/contratarButton.dart';
 
 class DetailsInstallersPage extends StatelessWidget {
 
@@ -120,7 +121,15 @@ class DetailsInstallersPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                   color: AppColors.white),
             ),
-          )
+          ),
+
+          SizedBox(
+            height: 50,
+          ),
+
+          SizedBox(
+              child: ContratarButton()
+          ),
         ],
       ),
     );

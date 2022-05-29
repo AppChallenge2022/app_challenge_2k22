@@ -1,3 +1,4 @@
+import 'package:app_challenge_2k22/base_models/appColors.dart';
 import 'package:app_challenge_2k22/login_pages/login.dart';
 import 'package:app_challenge_2k22/login_pages/signUpForm.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class SignUp extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: AppColors.darkBlue,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -24,22 +25,6 @@ class SignUp extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(horizontal: 100),
-            //   child: Text(
-            //     "Criar conta",
-            //     style: TextStyle(
-            //       fontSize: 32,
-            //       fontWeight: FontWeight.w700,
-            //     ),
-            //   ),
-            // ),
-            // SizedBox(
-            //   height: 20,
-            // ),
-            // const SizedBox(
-            //   width: 5,
-            // ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: Row(
@@ -59,7 +44,7 @@ class SignUp extends StatelessWidget {
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
                         decoration: TextDecoration.underline,
-                        color: Colors.green,
+                        color: AppColors.darkBlue,
                       ),
                     ),
                   )
